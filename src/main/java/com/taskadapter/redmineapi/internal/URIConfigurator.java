@@ -120,7 +120,7 @@ public class URIConfigurator {
         return origParams
                 .stream()
                 .filter(Objects::nonNull)
-                .collect(Collectors.toMap(RequestParam::getName, a -> a, (s1, s2) -> s1))
+                .collect(Collectors.toMap(RequestParam::getValue, a -> a, (s1, s2) -> s1))
                 .values();
     }
 
